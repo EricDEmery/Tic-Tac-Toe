@@ -93,23 +93,23 @@ Win conditions
 # Functional Psuedocode #
 
 Render()
-    Renders Board
-    Renders Start Button
+    -Renders Board
+    -Renders Start Button
 
 takeTurn()
-    Once player selects tile
-    turn switches to other player
-    turn ++
+    -Once player selects tile
+    -turn switches to other player
+    -turn ++
 
 checkWin()
-    IF turn >= 3
-    check win condition
-    (How can I implement win conditions in a function)
+    -IF turn >= 3
+    -check win condition
+    -(How can I implement win conditions in a function)
 
 endGame()
-    IF checkWin === true
-    return (insert player wins)
+    -IF checkWin === true
+    -return (insert player wins)
 
 reset()
-    IF reset button clicked
-    clear board back to start
+    -IF reset button clicked
+    -clear board back to start
