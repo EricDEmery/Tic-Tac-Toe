@@ -20,12 +20,16 @@ In this project we are instructed to use JavaScript to create a Tic Tac Toe game
     Users take turns selecting one empty space at a time
     Each user has his/her own symbol assigned.
 
-## Procedural Code ##
+# Procedural Code #
 
 **BEGIN**
 
+The Board
+
     Game board renders upon opening.
     There are 9 board tiles.
+    (Possibly made with an array method?)
+    (Keep the STATE of the board in mind througout process)
 
               |   | 
            -----------
@@ -33,13 +37,21 @@ In this project we are instructed to use JavaScript to create a Tic Tac Toe game
            -----------
               |   |  
 
-    (Symbols are just placeholders, board is empty on start)
+RESET BUTTON
 
-    There are 2 players
-    There are two symbols X and O
-    Each player selects one empty tile per turn
+    Reset button will be available to restart game (Deciding whether not to make it visible for the entire game,
+    or make it only visible after a win condition is met)
 
 **INIT**
+
+Players
+
+    The game will have 2 players
+
+    Player one uses the "X" symbol
+    While Player two uses the "O"
+    Each player will select ONE empty space per turn
+    Each player must wait until the other has selected an empty tile before selecting their own
 
 Turns
 
@@ -77,4 +89,6 @@ Win conditions
                                  /   \
         2 Ways Diagonally       /     \
                                /       \
+        
+# Functional Psuedocode #
 
