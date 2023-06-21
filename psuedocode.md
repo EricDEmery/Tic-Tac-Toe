@@ -65,8 +65,8 @@ Win conditions
     The game is won if a player gets 3 of their symbols in a row
     8 possible outcomes result in a WIN
 
-        3 Ways Horizontally -----------
                             -----------
+        3 Ways Horizontally -----------
                             -----------
 
                           |   |   |
