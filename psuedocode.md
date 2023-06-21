@@ -27,11 +27,11 @@ In this project we are instructed to use JavaScript to create a Tic Tac Toe game
     Game board renders upon opening.
     There are 9 board tiles.
 
-            0 | X | 0
+              |   | 
            -----------
-            X | 0 | X
+              |   | 
            -----------
-            X | 0 | X 
+              |   |  
 
     (Symbols are just placeholders, board is empty on start)
 
@@ -51,9 +51,20 @@ Turns
 Win conditions
 
     Game is one when one player gets 3 symbols in a row.
-    Game can be ended in 2 different ways a **WIN** or a **TIE**
+    Game can be ended in 2 different ways a WIN or a TIE
+    The game ends in a TIE if all tiles are selected and neother player got 3 in a row
+
+        Example of a TIE:
+
+             X | 0 | X
+           -----------
+             X | 0 | X
+           -----------
+             0 | X | 0
+
     The game is won if a player gets 3 of their symbols in a row
-    8 possible outcomes result in a **WIN**
+    8 possible outcomes result in a WIN
+
         3 Ways Horizontally -----------
                             -----------
                             -----------
