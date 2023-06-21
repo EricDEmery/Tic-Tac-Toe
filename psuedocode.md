@@ -115,5 +115,6 @@ endGame()
     -return (insert player wins)
 
 reset()
+
     -IF reset button clicked
     -clear board back to start
