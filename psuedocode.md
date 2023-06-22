@@ -92,7 +92,7 @@ Win conditions
         
 # Functional Psuedocode #
 
-Render()
+RenderUI()
 
     -Renders Board
     -Renders Start Button
@@ -103,15 +103,15 @@ takeTurn()
     -turn switches to other player
     -turn ++
 
-checkWin()
+checkWinner()
 
     -IF turn >= 3
     -check win condition
     -(How can I implement win conditions in a function)
 
-endGame()
+displayWinner()
 
-    -IF checkWin === true
+    -IF checkWinner === true
     -return (insert player wins)
 
 reset()
