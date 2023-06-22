@@ -29,13 +29,13 @@ function takeTurn(tile, index) {
 
 // Renders the game board
 function renderUI(board) {
-    const boardContainer = document.getElementById("board");
+    const boardContainer = document.getElementById("app");
     boardContainer.innerHTML = "";
 
     // Generate elements for each tile on the board
     board.forEach((tileValue, index) => {
         const tile = document.createElement("button");
-        tile.className = "btn btn-outline-primary tile";
+        tile.className = "btn btn-outline-primary tile col-4";
         tile.textContent = tileValue; // adds players symbol to tile
 
         // Add event listener for player turn
