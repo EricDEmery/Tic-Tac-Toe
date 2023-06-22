@@ -30,7 +30,7 @@ function takeTurn(tile, index) {
 // Renders the game board
 function renderUI(board) {
     const boardContainer = document.getElementById("board");
-    boardContainer.innerHTML = "-";
+    boardContainer.innerHTML = "";
 
     // Generate elements for each tile on the board
     board.forEach((tileValue, index) => {
