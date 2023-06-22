@@ -1,41 +1,28 @@
-const app = document.getElementById("app")
-const reset = document.createElement("button")
-        reset.innerText = "Reset"
-const start = document.createElement("button")
-        start.innerText = "Start Game"
-
-let gameState = {
-
-    gameActive: "true",
-    playerTurn: "X",
-    turnCounter: 0,
-    winner:"",
-    gameBoard: [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8]    
-    ],
-
-    winConditions: [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [6, 4, 2],
-        [8, 4, 0]
-    ]
+function generateUI() {
+    //array for the 9 spots on the game board
+    const board = ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
+    return board;
 }
 
-function createBoard()
-    for (let i = 0; i <= 3; i++) {
-    let row = document.createElement("div")
-    row.classList.add("row")
+function rednerUI(board) {
+    const boardContainer =  document.getElementById("board")
+    boardContainer.innerHTML = "";
+    
+    //generates elements for each tile
+board.forEach((tileValue, index) => {
+    const tile = document.createElement("button");
+    tile.className = "tile";
+    tile. textContent = tileValue;
 
-    for (let j = 0; j <= 3; j++) {
-        let tile = document.createElement("button")
-        tile.setAttribute("id")
-    }
+    //Adds event listner for click
+    tile.addEventListener("click", () => takeTurn(tile, index));
+    
+    boardContainer.appendChild(tile);
+});
 
-    }
+//sets current player
+let currentPlayer = "X";
+//sets the game board to the original init function
+let gameBoard = generateUI();
+//checks for active game
+let gameStatus = true;
