@@ -1,48 +1,49 @@
 body {
-    background-color:grey;
+  background-color: grey;
 }
+
+/* Style for tiles */
 .tile {
-    width: 90px;
-    height: 90px;
-    margin: 5px;
-    background-color: #ffdaa6;
-    border: 2px solid #cccccc;
-    border-radius: 5px;
-    font-size: 36px;
-    color: #333333;
-    text-align: center;
-    line-height: 90px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .tile:hover {
-    transform: scale(1.1);
-    background-color: #ffd094;
-  }
-  
-  /* Styles for the reset button */
-  .reset-button {
-    display: block;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #ff7f50;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .reset-button:hover {
-    transform: scale(1.1);
-    background-color: #ff6347;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out
-  }
-  
+  width: 90px;
+  height: 90px;
+  margin: 5px;
+  background-color: #ffdaa6;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  font-size: 36px;
+  color: #333333;
+  text-align: center;
+  line-height: 90px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.tile:hover {
+  transform: scale(1.1);
+  background-color: #ffd094;
+}
+
+/* Styles for the reset button */
+.reset-button {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ff7f50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  transform: scale(1.1);
+  background-color: #ff6347;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

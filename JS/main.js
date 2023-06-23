@@ -13,6 +13,10 @@ function takeTurn(tile, index) {
     tile.textContent = currentPlayer;
     tile.disabled = true; // Disables the tile button
 
+    // Change the background color of the clicked tile
+    tile.style.backgroundColor = "orange";
+    tile.style.border = "orange"
+
     // Switch to the next player's turn
     currentPlayer = currentPlayer === "X" ? "O" : "X";
 
