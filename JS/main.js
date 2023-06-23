@@ -47,6 +47,13 @@ function renderUI(board) {
   const gameContainer = document.getElementById("app");
   gameContainer.innerHTML = "";
 
+  const header = document.createElement("header")
+  header.textContent = "Tic Tac Toe"
+  header.style.textAlign = "center";
+  header.style.fontSize = "32px";
+  header.style.marginTop = "20px";
+  gameContainer.appendChild(header)
+
   // Creates container for board to style
   const boardContainer = document.createElement("div");
   boardContainer.id = "board-container";
@@ -54,7 +61,7 @@ function renderUI(board) {
   boardContainer.style.gridTemplateColumns = "repeat(3, 100px)";
   boardContainer.style.gridGap = "10px";
   boardContainer.style.justifyContent = "center";
-  boardContainer.style.marginTop = "150px";
+  boardContainer.style.marginTop = "50px";
 
   // Generate elements for each tile on the board
   board.forEach((tileValue, index) => {
