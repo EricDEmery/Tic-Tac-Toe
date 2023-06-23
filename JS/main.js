@@ -18,12 +18,13 @@ function takeTurn(tile, index) {
     tile.style.border = "orange"
 
     // Switch to the next player's turn
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    currentPlayer = currentPlayer === "X" ? "O" : "X"; //If current player is X, changes to O
 
     // Check for a win or tie condition
     if (checkWinner(currentPlayer)) {
       displayWinner(currentPlayer); // Display the winner message
       gameStatus = false; // Set the game status to inactive
+      
     } else if (checkTie()) {
       displayTie(); // Display the tie message
       gameStatus = false; // Set the game status to inactive
