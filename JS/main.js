@@ -13,6 +13,9 @@ function generateUI() {
       tile.textContent = currentPlayer;
       tile.disabled = true; // Disables the tile button
   
+      // Switch to the next player's turn
+      currentPlayer = currentPlayer === "X" ? "O" : "X";
+  
       // Check for a win or tie condition
       if (checkWinner(currentPlayer)) {
         displayWinner(currentPlayer); // Display the winner message
@@ -20,9 +23,6 @@ function generateUI() {
       } else if (checkTie()) {
         displayTie(); // Display the tie message
         gameStatus = false; // Set the game status to inactive
-      } else {
-        // Switch to the next player's turn
-        currentPlayer = currentPlayer === "X" ? "O" : "X";
       }
     }
   }
@@ -40,23 +40,27 @@ function generateUI() {
   
   // Renders the game board
   function renderUI(board) {
-    const boardContainer = document.getElementById("app");
-    boardContainer.innerHTML = "";
+    const gameContainer = document.getElementById("app");
+    gameContainer.innerHTML = "";
   
-      // Centers the Board Tiles
-  boardContainer.style.display = "flex";
-  boardContainer.style.justifyContent = "center";
-
+    // Create the board container
+    const boardContainer = document.createElement("div");
+    boardContainer.id = "board-container";
+    boardContainer.style.display = "grid";
+    boardContainer.style.gridTemplateColumns = "repeat(3, 100px)";
+    boardContainer.style.gridGap = "10px";
+    boardContainer.style.justifyContent = "center";
+    boardContainer.style.marginTop = "150px"
+  
     // Generate elements for each tile on the board
     board.forEach((tileValue, index) => {
       const tile = document.createElement("button");
       tile.className = "btn btn-outline-primary tile";
       tile.textContent = tileValue; // adds players symbol to tile
   
-      // styles for the board tiles
+      // Apply styles to the tile
       tile.style.width = "100px";
       tile.style.height = "100px";
-      tile.style.margin = "10px";
   
       // Add event listener for player turn
       tile.addEventListener("click", () => takeTurn(tile, index));
@@ -76,8 +80,9 @@ function generateUI() {
     // Add event listener for reset button
     resetButton.addEventListener("click", resetGame);
   
-    // Append the reset button to the board container
-    boardContainer.appendChild(resetButton);
+    // Append the board container and reset button to the game container
+    gameContainer.appendChild(boardContainer);
+    gameContainer.appendChild(resetButton);
   }
   
   // Set variables for the current player, game board, and game status
